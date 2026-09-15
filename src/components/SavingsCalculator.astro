@@ -1,0 +1,498 @@
+---
+---
+
+<section class="section section-dark savings-calc-section" id="calculadora" aria-labelledby="calc-title">
+  <div class="calc-bg-glow" aria-hidden="true"></div>
+  <div class="container">
+    <div class="section-header reveal-on-scroll">
+      <span class="eyebrow text-yellow">SIMULADOR DE ECONOMIA</span>
+      <h2 id="calc-title" class="section-title">Quanto você economiza sendo membro?</h2>
+      <p class="section-subtitle">
+        Veja na ponta do lápis a vantagem de ter o visual sempre alinhado sem pagar a cada visita.
+      </p>
+    </div>
+
+    <div class="calc-container reveal-on-scroll">
+      <div class="calc-inputs">
+        <!-- Service Choice -->
+        <div class="input-group">
+          <label class="input-label">1. Qual serviço você costuma fazer?</label>
+          <div class="service-pills" role="radiogroup" aria-label="Seleção de Serviço">
+            <button type="button" class="pill-btn active" data-service="hair" role="radio" aria-checked="true">
+              <span>Cabelo</span>
+            </button>
+            <button type="button" class="pill-btn" data-service="beard" role="radio" aria-checked="false">
+              <span>Barba</span>
+            </button>
+            <button type="button" class="pill-btn" data-service="combo" role="radio" aria-checked="false">
+              <span>Corte + Barba</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Frequency Choice -->
+        <div class="input-group">
+          <label class="input-label">2. Quantas vezes você vai à barbearia por mês?</label>
+          <div class="freq-pills" role="radiogroup" aria-label="Frequência Mensal">
+            <button type="button" class="pill-btn" data-freq="2" role="radio" aria-checked="false">
+              <span>2x ao mês</span>
+              <small>Manutenção</small>
+            </button>
+            <button type="button" class="pill-btn active" data-freq="3" role="radio" aria-checked="true">
+              <span>3x ao mês</span>
+              <small>Mais comum</small>
+            </button>
+            <button type="button" class="pill-btn" data-freq="4" role="radio" aria-checked="false">
+              <span>4x ao mês</span>
+              <small>Sempre impecável</small>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Card -->
+      <div class="calc-results">
+        <div class="results-header">
+          <span class="res-badge">ECONOMIA ESTIMADA</span>
+          <span class="discount-badge" id="discount-pct">-37%</span>
+        </div>
+
+        <div class="comparison-row">
+          <div class="comp-col">
+            <span class="comp-label">Pagando Avulso</span>
+            <span class="comp-val val-avulso" id="val-avulso">R$ 150,00</span>
+            <span class="comp-sub">por mês</span>
+          </div>
+
+          <div class="comp-divider" aria-hidden="true">VS</div>
+
+          <div class="comp-col highlight">
+            <span class="comp-label">No Clube Zangadin</span>
+            <span class="comp-val val-clube" id="val-clube">R$ 94,90</span>
+            <span class="comp-sub">plano ilimitado</span>
+          </div>
+        </div>
+
+        <div class="savings-total-box">
+          <div class="savings-info">
+            <span class="savings-label">Você economiza:</span>
+            <div class="savings-amount" id="savings-amount">R$ 55,10 <small>/mês</small></div>
+            <span class="savings-annual" id="savings-annual">Economia de <strong>R$ 661,20</strong> por ano</span>
+          </div>
+        </div>
+
+        <a href="#planos" class="btn btn-yellow btn-full">
+          Garantir Meu Plano Ilimitado
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .savings-calc-section {
+    background-color: var(--navy-deep);
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .calc-bg-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(600px, 90vw);
+    height: 400px;
+    background: radial-gradient(circle, rgba(246, 196, 16, 0.08) 0%, rgba(1, 36, 92, 0) 70%);
+    pointer-events: none;
+    filter: blur(40px);
+  }
+
+  .calc-container {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 32px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 32px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 960px) {
+    .calc-container {
+      grid-template-columns: 1fr;
+      padding: 24px 18px;
+      gap: 24px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .calc-container {
+      padding: 16px 12px;
+      gap: 20px;
+      border-radius: 6px;
+    }
+  }
+
+  .input-group {
+    margin-bottom: 20px;
+  }
+
+  .input-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .input-label {
+    display: block;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #cbd5e1;
+    margin-bottom: 10px;
+  }
+
+  .service-pills,
+  .freq-pills {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 540px) {
+    .service-pills,
+    .freq-pills {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+  }
+
+  .pill-btn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #e2e8f0;
+    padding: 10px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-family: inherit;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 540px) {
+    .pill-btn {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 12px 16px;
+    }
+  }
+
+  .pill-btn span {
+    font-size: 0.88rem;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .pill-btn small {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    margin-top: 2px;
+  }
+
+  @media (max-width: 540px) {
+    .pill-btn small {
+      margin-top: 0;
+    }
+  }
+
+  .pill-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .pill-btn.active {
+    background: rgba(246, 196, 16, 0.15);
+    border-color: var(--yellow-main);
+    color: var(--yellow-main);
+    box-shadow: 0 0 16px rgba(246, 196, 16, 0.2);
+  }
+
+  .pill-btn.active small {
+    color: #fef08a;
+  }
+
+  /* Results Box */
+  .calc-results {
+    background: rgba(1, 36, 92, 0.6);
+    border: 1px solid rgba(246, 196, 16, 0.3);
+    border-radius: 4px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  @media (max-width: 480px) {
+    .calc-results {
+      padding: 16px 12px;
+      gap: 14px;
+    }
+  }
+
+  .results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .res-badge {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    text-transform: uppercase;
+  }
+
+  .discount-badge {
+    background: var(--yellow-main);
+    color: var(--navy-deep);
+    font-size: 0.8rem;
+    font-weight: 900;
+    padding: 3px 10px;
+    border-radius: 50px;
+  }
+
+  .comparison-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 8px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 14px 10px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 360px) {
+    .comparison-row {
+      padding: 10px 6px;
+      gap: 4px;
+    }
+  }
+
+  .comp-col {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 0;
+  }
+
+  .comp-label {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .comp-val {
+    font-family: var(--font-heading);
+    font-size: clamp(1.1rem, 3.8vw, 1.35rem);
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  .val-avulso {
+    color: #cbd5e1;
+    text-decoration: line-through;
+    opacity: 0.8;
+  }
+
+  .comp-col.highlight .comp-label {
+    color: var(--yellow-main);
+  }
+
+  .val-clube {
+    color: #ffffff;
+  }
+
+  .comp-sub {
+    font-size: 0.7rem;
+    color: #64748b;
+    white-space: nowrap;
+  }
+
+  .comp-divider {
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.2);
+    padding: 0 2px;
+  }
+
+  .savings-total-box {
+    background: rgba(246, 196, 16, 0.08);
+    border-left: 3px solid var(--yellow-main);
+    padding: 12px 14px;
+    border-radius: 0 4px 4px 0;
+    box-sizing: border-box;
+  }
+
+  .savings-label {
+    font-size: 0.8rem;
+    color: #cbd5e1;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .savings-amount {
+    font-family: var(--font-heading);
+    font-size: clamp(1.35rem, 5vw, 1.6rem);
+    font-weight: 900;
+    color: var(--yellow-main);
+    line-height: 1.2;
+  }
+
+  .savings-amount small {
+    font-size: 0.85rem;
+    color: #e2e8f0;
+    font-weight: 500;
+  }
+
+  .savings-annual {
+    display: block;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-top: 3px;
+  }
+
+  .savings-annual strong {
+    color: #ffffff;
+  }
+
+  .btn-full {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 18px;
+    font-size: 0.86rem;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: normal;
+  }
+</style>
+
+<script>
+  // Data for calculation
+  const PRICING_DATA = {
+    hair: {
+      avulsoUnitPrice: 50,
+      clubePrice: 94.90
+    },
+    beard: {
+      avulsoUnitPrice: 45,
+      clubePrice: 109.90
+    },
+    combo: {
+      avulsoUnitPrice: 85,
+      clubePrice: 189.90
+    }
+  };
+
+  function initCalculator() {
+    const serviceButtons = document.querySelectorAll('.service-pills .pill-btn');
+    const freqButtons = document.querySelectorAll('.freq-pills .pill-btn');
+
+    const valAvulsoEl = document.getElementById('val-avulso');
+    const valClubeEl = document.getElementById('val-clube');
+    const savingsAmountEl = document.getElementById('savings-amount');
+    const savingsAnnualEl = document.getElementById('savings-annual');
+    const discountPctEl = document.getElementById('discount-pct');
+
+    let currentService = 'hair';
+    let currentFreq = 3;
+
+    function updateCalculations() {
+      const data = PRICING_DATA[currentService];
+      const avulsoTotal = data.avulsoUnitPrice * currentFreq;
+      const clubeTotal = data.clubePrice;
+      const monthlySavings = Math.max(0, avulsoTotal - clubeTotal);
+      const annualSavings = monthlySavings * 12;
+      const discountPct = Math.round((monthlySavings / avulsoTotal) * 100);
+
+      if (valAvulsoEl) valAvulsoEl.textContent = `R$ ${avulsoTotal.toFixed(2).replace('.', ',')}`;
+      if (valClubeEl) valClubeEl.textContent = `R$ ${clubeTotal.toFixed(2).replace('.', ',')}`;
+      
+      if (savingsAmountEl) {
+        savingsAmountEl.innerHTML = `R$ ${monthlySavings.toFixed(2).replace('.', ',')} <small>/mês</small>`;
+      }
+      if (savingsAnnualEl) {
+        savingsAnnualEl.innerHTML = `Economia de <strong>R$ ${annualSavings.toFixed(2).replace('.', ',')}</strong> por ano`;
+      }
+      if (discountPctEl) {
+        discountPctEl.textContent = discountPct > 0 ? `-${discountPct}%` : '0%';
+      }
+    }
+
+    serviceButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        serviceButtons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-checked', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-checked', 'true');
+        currentService = btn.getAttribute('data-service') || 'hair';
+        updateCalculations();
+      });
+    });
+
+    freqButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        freqButtons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-checked', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-checked', 'true');
+        currentFreq = parseInt(btn.getAttribute('data-freq') || '3', 10);
+        updateCalculations();
+      });
+    });
+
+    updateCalculations();
+  }
+
+  // Initialize after DOM load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCalculator);
+  } else {
+    initCalculator();
+  }
+</script>

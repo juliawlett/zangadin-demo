@@ -1,0 +1,387 @@
+---
+// Locations.astro
+import Icon from './Icon.astro';
+---
+
+<section class="locations-sec" id="unidades">
+  <div class="shell">
+    <div class="locations-head reveal">
+      <div class="loc-tag">
+        <span>ONDE ENCONTRAR A ZANGADIN</span>
+      </div>
+      <h2 class="display-title section-title">
+        Escolha sua unidade favorita em Cuiabá.
+      </h2>
+      <p class="body-lead">
+        Duas estruturas completas, climatizadas e com estacionamento fácil para você cuidar do visual perto de casa ou do trabalho.
+      </p>
+    </div>
+
+    <div class="locations-grid reveal stagger">
+      <!-- Unidade 01: Beira Rio -->
+      <article class="location-card">
+        <div class="loc-photo-wrap">
+          <img
+            src="/images/img_4.jpg"
+            alt="Fachada Zangadin Barbearia Unidade Beira Rio"
+            width="600"
+            height="340"
+            loading="lazy"
+          />
+          <div class="loc-badge-corner">Unidade Beira Rio</div>
+        </div>
+        
+        <div class="loc-content">
+          <div class="loc-info-block">
+            <h3 class="loc-title">Zangadin — Beira Rio</h3>
+            <p class="loc-address">
+              <Icon name="map-pin" size={16} class="loc-icon-pin" />
+              <span>Av. Beira Rio, Cuiabá — MT</span>
+            </p>
+            
+            <div class="loc-features">
+              <span class="feat-tag">
+                <Icon name="car" size={14} />
+                <span>Estacionamento</span>
+              </span>
+              <span class="feat-tag">
+                <Icon name="coffee" size={14} />
+                <span>Bar &amp; Café</span>
+              </span>
+              <span class="feat-tag">
+                <Icon name="snowflake" size={14} />
+                <span>Climatizado</span>
+              </span>
+            </div>
+
+            <div class="loc-hours">
+              <div class="hour-row">
+                <span>Segunda a sexta:</span>
+                <strong>08h às 20h</strong>
+              </div>
+              <div class="hour-row">
+                <span>Sábado:</span>
+                <strong>08h às 18h</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="loc-actions">
+            <a class="btn btn-yellow loc-main-btn" href="https://cashbarber.com.br/zangadinbarbearia" target="_blank" rel="noopener">
+              <span>Agendar na Beira Rio</span>
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </a>
+            
+            <div class="loc-quick-actions">
+              <a class="quick-act-btn act-maps" href="https://maps.google.com/?q=Zangadin+Barbearia+Beira+Rio+Cuiaba" target="_blank" rel="noopener">
+                <Icon name="navigation" size={14} />
+                <span>Como Chegar (GPS)</span>
+              </a>
+              <a class="quick-act-btn act-wpp" href="https://wa.me/5565999999999?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20Unidade%20Beira%20Rio" target="_blank" rel="noopener">
+                <Icon name="message-circle" size={14} />
+                <span>WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Unidade 02: Jardim Imperial -->
+      <article class="location-card">
+        <div class="loc-photo-wrap">
+          <img
+            src="/images/img_5.jpg"
+            alt="Ambiente interno Zangadin Barbearia Unidade Jardim Imperial"
+            width="600"
+            height="340"
+            loading="lazy"
+          />
+          <div class="loc-badge-corner">Unidade Jardim Imperial</div>
+        </div>
+        
+        <div class="loc-content">
+          <div class="loc-info-block">
+            <h3 class="loc-title">Zangadin — Jardim Imperial</h3>
+            <p class="loc-address">
+              <Icon name="map-pin" size={16} class="loc-icon-pin" />
+              <span>Região do Jardim Imperial, Cuiabá — MT</span>
+            </p>
+            
+            <div class="loc-features">
+              <span class="feat-tag">
+                <Icon name="car" size={14} />
+                <span>Fácil Acesso</span>
+              </span>
+              <span class="feat-tag">
+                <Icon name="beer" size={14} />
+                <span>Chopp Gelado</span>
+              </span>
+              <span class="feat-tag">
+                <Icon name="snowflake" size={14} />
+                <span>Climatizado</span>
+              </span>
+            </div>
+
+            <div class="loc-hours">
+              <div class="hour-row">
+                <span>Segunda a sexta:</span>
+                <strong>08h às 20h</strong>
+              </div>
+              <div class="hour-row">
+                <span>Sábado:</span>
+                <strong>08h às 18h</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="loc-actions">
+            <a class="btn btn-yellow loc-main-btn" href="https://cashbarber.com.br/zangadinbarbearia" target="_blank" rel="noopener">
+              <span>Agendar no Imperial</span>
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </a>
+            
+            <div class="loc-quick-actions">
+              <a class="quick-act-btn act-maps" href="https://maps.google.com/?q=Zangadin+Barbearia+Jardim+Imperial+Cuiaba" target="_blank" rel="noopener">
+                <Icon name="navigation" size={14} />
+                <span>Como Chegar (GPS)</span>
+              </a>
+              <a class="quick-act-btn act-wpp" href="https://wa.me/5565999999999?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20Unidade%20Jardim%20Imperial" target="_blank" rel="noopener">
+                <Icon name="message-circle" size={14} />
+                <span>WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .locations-sec {
+    background-color: var(--off-white);
+    padding: 100px 0;
+    position: relative;
+    border-bottom: 1px solid rgba(1, 36, 92, 0.08);
+  }
+
+  .locations-head {
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 48px 0;
+  }
+
+  .locations-head .body-lead {
+    max-width: 860px;
+  }
+
+  .loc-tag {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: var(--navy-main);
+    letter-spacing: 0.14em;
+    margin-bottom: 14px;
+  }
+
+  .loc-tag::after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: var(--yellow-main);
+    margin: 6px 0 0 0;
+  }
+
+  .locations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  @media (max-width: 960px) {
+    .locations-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+  }
+
+  .location-card {
+    background: #ffffff;
+    border: 1px solid rgba(1, 36, 92, 0.08);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    transition: all var(--transition-normal);
+  }
+
+  .location-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(1, 36, 92, 0.1);
+    border-color: rgba(246, 196, 16, 0.5);
+  }
+
+  .loc-photo-wrap {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+  }
+
+  .loc-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s var(--ease);
+  }
+
+  .location-card:hover .loc-photo-wrap img {
+    transform: scale(1.04);
+  }
+
+  .loc-badge-corner {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(0, 24, 63, 0.85);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-size: 0.76rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(246, 196, 16, 0.3);
+  }
+
+  .loc-content {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    gap: 24px;
+  }
+
+  .loc-title {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--navy-deep);
+    margin-bottom: 6px;
+  }
+
+  .loc-address {
+    font-size: 0.88rem;
+    color: #64748b;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .loc-icon-pin {
+    color: var(--navy-main);
+    flex-shrink: 0;
+  }
+
+  .loc-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .feat-tag {
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: var(--navy-deep);
+    background: rgba(1, 36, 92, 0.05);
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .loc-hours {
+    background: rgba(1, 36, 92, 0.03);
+    border: 1px solid rgba(1, 36, 92, 0.06);
+    border-radius: 4px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .hour-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.86rem;
+    color: #475569;
+  }
+
+  .hour-row strong {
+    color: var(--navy-deep);
+  }
+
+  .loc-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .loc-main-btn {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 0.88rem;
+  }
+
+  .loc-quick-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .quick-act-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 12px;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+  }
+
+  .act-maps {
+    background: rgba(1, 36, 92, 0.06);
+    color: var(--navy-main);
+    border: 1px solid rgba(1, 36, 92, 0.12);
+  }
+
+  .act-maps:hover {
+    background: var(--navy-main);
+    color: #ffffff;
+    border-color: var(--navy-main);
+  }
+
+  .act-wpp {
+    background: rgba(37, 211, 102, 0.08);
+    color: #15803d;
+    border: 1px solid rgba(37, 211, 102, 0.25);
+  }
+
+  .act-wpp:hover {
+    background: #16a34a;
+    color: #ffffff;
+    border-color: #16a34a;
+  }
+</style>

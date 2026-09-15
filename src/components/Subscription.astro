@@ -1,0 +1,346 @@
+---
+// Subscription.astro
+---
+
+<section class="subscription" id="planos">
+  <!-- Subtle Background Official Z + Razor Watermark -->
+  <div class="sub-watermark" aria-hidden="true">
+    <img src="/images/logo-symbol.png" alt="" width="560" height="560" loading="lazy" />
+  </div>
+
+  <div class="shell">
+    <div class="sub-header reveal">
+      <div class="eyebrow eyebrow-yellow">ZANGADIN POR ASSINATURA</div>
+      <h2 class="display-title section-title">Você não precisa esperar o cabelo pedir socorro.</h2>
+      <p class="body-lead">
+        Mantenha corte e barba sempre em dia com um plano que combina com a sua rotina e economize todos os meses.
+      </p>
+      <div class="sub-tagline">Escolha seu plano. Agende. Volte quando precisar.</div>
+
+      <!-- Filter Tabs -->
+      <div class="plans-filter-tabs" role="tablist" aria-label="Filtrar Modalidade de Plano">
+        <button type="button" class="plan-tab active" data-filter="all" role="tab" aria-selected="true">
+          Todos os Serviços
+        </button>
+        <button type="button" class="plan-tab" data-filter="hair" role="tab" aria-selected="false">
+          Apenas Corte
+        </button>
+        <button type="button" class="plan-tab" data-filter="beard" role="tab" aria-selected="false">
+          Apenas Barba
+        </button>
+        <button type="button" class="plan-tab" data-filter="combo" role="tab" aria-selected="false">
+          Corte + Barba
+        </button>
+      </div>
+
+      <!-- Trust & Flexibility Guarantee Pills -->
+      <div class="plans-guarantee-bar">
+        <div class="guarantee-pill">
+          <span class="guarantee-dot">✓</span>
+          <span><strong>Sem fidelidade</strong> · Cancele quando quiser</span>
+        </div>
+        <div class="guarantee-pill">
+          <span class="guarantee-dot">✓</span>
+          <span><strong>Sem matrícula</strong> · Ativação instantânea</span>
+        </div>
+        <div class="guarantee-pill">
+          <span class="guarantee-dot">✓</span>
+          <span><strong>2 Unidades</strong> · Beira Rio e Imperial</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="plans-grid reveal stagger">
+      <!-- 1. Plano Limitado -->
+      <div class="plan-card" data-plan="limitado">
+        <div class="plan-head">
+          <h3 class="plan-name">Plano Limitado</h3>
+          <span class="plan-days">Segunda a Quarta</span>
+        </div>
+
+        <div class="plan-price-list">
+          <div class="price-item" data-category="hair">
+            <span class="item-label">Corte</span>
+            <div class="item-val">
+              <span class="currency">R$</span>
+              <strong>79,90</strong>
+              <small>/mês</small>
+            </div>
+          </div>
+          <div class="price-item" data-category="beard">
+            <span class="item-label">Barba</span>
+            <div class="item-val">
+              <span class="currency">R$</span>
+              <strong>94,90</strong>
+              <small>/mês</small>
+            </div>
+          </div>
+          <div class="price-item" data-category="combo">
+            <span class="item-label">Corte + Barba</span>
+            <div class="item-val">
+              <span class="currency">R$</span>
+              <strong>144,90</strong>
+              <small>/mês</small>
+            </div>
+          </div>
+        </div>
+
+        <ul class="plan-features">
+          <li><span>✓</span> Válido nas 2 unidades (Beira Rio e Imperial)</li>
+          <li><span>✓</span> Agendamento direto no App</li>
+          <li><span>✓</span> Sem fidelidade ou multa</li>
+        </ul>
+
+        <a class="btn btn-outline-white" href="https://cashbarber.com.br/zangadinbarbearia" target="_blank" rel="noopener">
+          Quero este plano ↗
+        </a>
+      </div>
+
+      <!-- 2. Plano Ilimitado (Featured) -->
+      <div class="plan-card featured" data-plan="ilimitado">
+        <div class="plan-badge">MAIS FLEXIBILIDADE</div>
+        
+        <div class="plan-head">
+          <h3 class="plan-name">Plano Ilimitado</h3>
+          <span class="plan-days">Segunda a Sábado</span>
+        </div>
+
+        <div class="plan-price-list">
+          <div class="price-item" data-category="hair">
+            <span class="item-label">Corte</span>
+            <div class="item-val">
+              <span class="currency">R$</span>
+              <strong>94,90</strong>
+              <small>/mês</small>
+            </div>
+          </div>
+          <div class="price-item" data-category="beard">
+            <span class="item-label">Barba</span>
+            <div class="item-val">
+              <span class="currency">R$</span>
+              <strong>109,90</strong>
+              <small>/mês</small>
+            </div>
+          </div>
+          <div class="price-item" data-category="combo">
+            <span class="item-label">Corte + Barba</span>
+            <div class="item-val">
+              <span class="currency">R$</span>
+              <strong>189,90</strong>
+              <small>/mês</small>
+            </div>
+          </div>
+        </div>
+
+        <ul class="plan-features">
+          <li><span>✓</span> Cortes ilimitados a semana toda</li>
+          <li><span>✓</span> Válido em ambas as unidades</li>
+          <li><span>✓</span> Escolha seu barbeiro de preferência</li>
+          <li><span>✓</span> Café especial / Chopp cortesia</li>
+        </ul>
+
+        <a class="btn btn-yellow" href="https://cashbarber.com.br/zangadinbarbearia" target="_blank" rel="noopener">
+          Quero este plano ↗
+        </a>
+      </div>
+
+      <!-- 3. Plano VIP -->
+      <div class="plan-card" data-plan="vip">
+        <div class="plan-badge vip-badge">EXPERIÊNCIA COMPLETA</div>
+        
+        <div class="plan-head">
+          <h3 class="plan-name">Plano VIP</h3>
+          <span class="plan-days">Segunda a Sábado</span>
+        </div>
+
+        <div class="plan-price-list">
+          <div class="price-item" data-category="hair">
+            <span class="item-label">Corte VIP</span>
+            <div class="item-val">
+              <span class="currency">R$</span>
+              <strong>149,90</strong>
+              <small>/mês</small>
+            </div>
+          </div>
+          <div class="price-item" data-category="beard">
+            <span class="item-label">Barba VIP</span>
+            <div class="item-val">
+              <span class="currency">R$</span>
+              <strong>199,90</strong>
+              <small>/mês</small>
+            </div>
+          </div>
+          <div class="price-item" data-category="combo">
+            <span class="item-label">Corte + Barba VIP</span>
+            <div class="item-val">
+              <span class="currency">R$</span>
+              <strong>299,90</strong>
+              <small>/mês</small>
+            </div>
+          </div>
+        </div>
+
+        <ul class="plan-features">
+          <li><span>✓</span> Tratamento capilar & Barbaterapia com toalha quente</li>
+          <li><span>✓</span> Prioridade máxima de agendamento</li>
+          <li><span>✓</span> Válido em todas as unidades</li>
+          <li><span>✓</span> Atendimento exclusivo</li>
+        </ul>
+
+        <a class="btn btn-outline-white" href="https://cashbarber.com.br/zangadinbarbearia" target="_blank" rel="noopener">
+          Quero ser VIP ↗
+        </a>
+      </div>
+    </div>
+
+    <div class="plan-footer-note reveal">
+      *Consulte condições, disponibilidade e regras dos planos no momento da contratação. Sem taxa de matrícula e sem fidelidade abusiva.
+    </div>
+  </div>
+</section>
+
+<style>
+  .plans-filter-tabs {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+
+  .plan-tab {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #cbd5e1;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all var(--transition-fast);
+  }
+
+  .plan-tab:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+  }
+
+  .plan-tab.active {
+    background: var(--yellow-main);
+    color: var(--navy-deep);
+    border-color: var(--yellow-main);
+    box-shadow: 0 0 14px rgba(246, 196, 16, 0.3);
+  }
+
+  .plans-guarantee-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .guarantee-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: #cbd5e1;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 6px 14px;
+    border-radius: 4px;
+  }
+
+  .guarantee-pill strong {
+    color: #ffffff;
+  }
+
+  .guarantee-dot {
+    color: var(--yellow-main);
+    font-weight: 800;
+  }
+
+  .plan-features {
+    list-style: none;
+    padding: 16px 0 0 0;
+    margin: 16px 0 24px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .plan-features li {
+    font-size: 0.84rem;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.4;
+  }
+
+  .plan-features li span {
+    color: var(--yellow-main);
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .vip-badge {
+    background: var(--navy-deep);
+    color: var(--yellow-main);
+    border: 1px solid var(--yellow-main);
+  }
+
+  .price-item.dimmed {
+    opacity: 0.3;
+  }
+
+  .price-item.focused {
+    background: rgba(246, 196, 16, 0.1);
+    border-radius: 4px;
+    padding: 6px 8px;
+  }
+</style>
+
+<script>
+  function initSubscriptionFilters() {
+    const tabs = document.querySelectorAll('.plans-filter-tabs .plan-tab');
+    const priceItems = document.querySelectorAll('.plan-price-list .price-item');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+
+        const filter = tab.getAttribute('data-filter') || 'all';
+
+        priceItems.forEach(item => {
+          const cat = item.getAttribute('data-category');
+          if (filter === 'all') {
+            item.classList.remove('dimmed');
+            item.classList.remove('focused');
+          } else if (cat === filter) {
+            item.classList.remove('dimmed');
+            item.classList.add('focused');
+          } else {
+            item.classList.add('dimmed');
+            item.classList.remove('focused');
+          }
+        });
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSubscriptionFilters);
+  } else {
+    initSubscriptionFilters();
+  }
+</script>

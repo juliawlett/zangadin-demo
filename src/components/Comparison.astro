@@ -1,0 +1,483 @@
+---
+// Comparison.astro - Animated High-End Value Proposition & Member Comparison
+import Icon from './Icon.astro';
+---
+
+<section class="section section-light comparison-sec" id="comparativo" aria-labelledby="comp-title">
+  <!-- Subtle ambient particle light -->
+  <div class="comp-ambient-glow" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="section-header reveal-on-scroll">
+      <span class="eyebrow">VANTAGENS EXCLUSIVAS</span>
+      <h2 id="comp-title" class="display-title section-title">Por que fazer parte do Clube Zangadin?</h2>
+      <p class="section-subtitle">
+        Compare a experiência tradicional com a conveniência de ter seu corte e barba sempre em dia sem surpresas no bolso.
+      </p>
+    </div>
+
+    <!-- Animated Dual Perspective Experience Cards -->
+    <div class="experience-compare-grid reveal-on-scroll">
+      
+      <!-- Card 1: Cliente Avulso (Traditional/Friction) -->
+      <div class="compare-card card-avulso">
+        <div class="card-header">
+          <div class="card-badge badge-muted">Modo Tradicional</div>
+          <h3 class="card-title">Cliente Avulso</h3>
+          <p class="card-lead">Pagar a cada visita avulsa</p>
+        </div>
+
+        <ul class="compare-features-list">
+          <li class="feature-item muted-feature">
+            <span class="feature-bullet bullet-cross">✕</span>
+            <div class="feature-text">
+              <strong>Gasto variável e imprevisto</strong>
+              <span>Você acaba gastando mais toda vez que precisa de manutenção.</span>
+            </div>
+          </li>
+          
+          <li class="feature-item muted-feature">
+            <span class="feature-bullet bullet-cross">✕</span>
+            <div class="feature-text">
+              <strong>Disputa de horários em dias cheios</strong>
+              <span>Sujeito a filas e encaixes de última hora sem preferência.</span>
+            </div>
+          </li>
+
+          <li class="feature-item muted-feature">
+            <span class="feature-bullet bullet-cross">✕</span>
+            <div class="feature-text">
+              <strong>Adiar o corte por conveniência</strong>
+              <span>O cabelo cresce desalinhado enquanto você espera a próxima folga.</span>
+            </div>
+          </li>
+
+          <li class="feature-item muted-feature">
+            <span class="feature-bullet bullet-cross">✕</span>
+            <div class="feature-text">
+              <strong>Pagamento burocrático</strong>
+              <span>Precisa passar cartão e pagar a cada atendimento no balcão.</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="card-footer-info">
+          <span class="card-tagline">Mais custo por visita</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Membro Clube Zangadin (VIP/Animated/Golden Glow) -->
+      <div class="compare-card card-member">
+        <div class="card-glow-border" aria-hidden="true"></div>
+        
+        <div class="card-header">
+          <div class="card-badge badge-vip">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>Experiência Exclusiva</span>
+          </div>
+          <h3 class="card-title text-gold">Membro Clube Zangadin</h3>
+          <p class="card-lead text-white-dim">Cuidado permanente com liberdade total</p>
+        </div>
+
+        <ul class="compare-features-list">
+          <li class="feature-item active-feature">
+            <span class="feature-bullet bullet-check">
+              <Icon name="check" size={16} />
+            </span>
+            <div class="feature-text">
+              <strong>Cortes ilimitados o mês todo</strong>
+              <span>Venha quantas vezes precisar. Seu estilo sempre no padrão.</span>
+            </div>
+          </li>
+
+          <li class="feature-item active-feature">
+            <span class="feature-bullet bullet-check">
+              <Icon name="check" size={16} />
+            </span>
+            <div class="feature-text">
+              <strong>Prioridade máxima de agendamento</strong>
+              <span>Reserve em segundos pelo app CashBarber ou WhatsApp no seu horário.</span>
+            </div>
+          </li>
+
+          <li class="feature-item active-feature">
+            <span class="feature-bullet bullet-check">
+              <Icon name="check" size={16} />
+            </span>
+            <div class="feature-text">
+              <strong>Válido nas 2 unidades em Cuiabá</strong>
+              <span>Atendimento integrado na Beira Rio e no Jardim Imperial.</span>
+            </div>
+          </li>
+
+          <li class="feature-item active-feature">
+            <span class="feature-bullet bullet-check">
+              <Icon name="check" size={16} />
+            </span>
+            <div class="feature-text">
+              <strong>Zero fidelidade ou taxas ocultas</strong>
+              <span>Liberdade total. Cancele quando quiser sem multas ou pegadinhas.</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="card-cta-block">
+          <a class="btn btn-yellow btn-full-card" href="#planos">
+            <span>Quero Fazer Parte do Clube</span>
+            <span class="btn-arrow" aria-hidden="true">→</span>
+          </a>
+          <span class="cta-micro-note">Assinatura em 1 minuto sem taxa de matrícula</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 3 Animated Value Pillars Below Cards -->
+    <div class="value-pillars-grid reveal-on-scroll">
+      <div class="value-pillar-card">
+        <div class="pillar-icon">
+          <Icon name="sparkles" size={24} />
+        </div>
+        <div class="pillar-content">
+          <h4>Economia de até 45%</h4>
+          <p>Mantenha seu visual alinhado gastando uma fração do valor de visitas avulsas.</p>
+        </div>
+      </div>
+
+      <div class="value-pillar-card">
+        <div class="pillar-icon">
+          <Icon name="clock" size={24} />
+        </div>
+        <div class="pillar-content">
+          <h4>Pontualidade Rigorosa</h4>
+          <p>Seu horário é sagrado. Atendimento ágil para não comprometer sua rotina.</p>
+        </div>
+      </div>
+
+      <div class="value-pillar-card">
+        <div class="pillar-icon">
+          <Icon name="shield-check" size={24} />
+        </div>
+        <div class="pillar-content">
+          <h4>Cancele Quando Quiser</h4>
+          <p>Total transparência. Sem fidelidade abusiva ou burocracia de cancelamento.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .comparison-sec {
+    background-color: var(--off-white);
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+    border-bottom: 1px solid rgba(1, 36, 92, 0.08);
+  }
+
+  .comp-ambient-glow {
+    position: absolute;
+    top: 30%;
+    right: -10%;
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(circle, rgba(246, 196, 16, 0.06) 0%, rgba(1, 36, 92, 0) 70%);
+    pointer-events: none;
+    filter: blur(60px);
+  }
+
+  /* Dual Perspective Grid */
+  .experience-compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 32px;
+    align-items: stretch;
+    margin-top: 16px;
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: 960px) {
+    .experience-compare-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+  }
+
+  .compare-card {
+    border-radius: 8px;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Card 1: Avulso */
+  .card-avulso {
+    background: #ffffff;
+    border: 1px solid rgba(1, 36, 92, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  }
+
+  .card-avulso:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(1, 36, 92, 0.08);
+  }
+
+  /* Card 2: Member (Navy & Gold Glow) */
+  .card-member {
+    background: radial-gradient(circle at 10% 20%, #01245C 0%, #00183F 100%);
+    color: #ffffff;
+    border: 1px solid rgba(246, 196, 16, 0.4);
+    box-shadow: 0 18px 48px rgba(0, 24, 63, 0.35), 0 0 0 1px rgba(246, 196, 16, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-member:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 24px 60px rgba(0, 24, 63, 0.45), 0 0 30px rgba(246, 196, 16, 0.25);
+    border-color: var(--yellow-main);
+  }
+
+  .card-glow-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--yellow-main), transparent);
+    animation: sweep 4s infinite linear;
+  }
+
+  @keyframes sweep {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .card-header {
+    margin-bottom: 28px;
+  }
+
+  .card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .badge-muted {
+    background: rgba(100, 116, 139, 0.12);
+    color: #475569;
+  }
+
+  .badge-vip {
+    background: rgba(246, 196, 16, 0.18);
+    color: var(--yellow-main);
+    border: 1px solid rgba(246, 196, 16, 0.4);
+  }
+
+  .pulse-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--yellow-main);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--yellow-main);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.3); }
+  }
+
+  .card-title {
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+    line-height: 1.15;
+  }
+
+  .text-gold {
+    color: #ffffff;
+  }
+
+  .card-lead {
+    font-size: 0.92rem;
+    color: #64748b;
+    margin: 0;
+  }
+
+  .text-white-dim {
+    color: #cbd5e1;
+  }
+
+  .compare-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .feature-bullet {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-size: 0.85rem;
+    font-weight: 900;
+  }
+
+  .bullet-cross {
+    background: rgba(239, 68, 68, 0.12);
+    color: #dc2626;
+  }
+
+  .bullet-check {
+    background: var(--yellow-main);
+    color: var(--navy-deep);
+  }
+
+  .feature-text strong {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+  }
+
+  .muted-feature .feature-text strong {
+    color: var(--navy-deep);
+  }
+
+  .muted-feature .feature-text span {
+    display: block;
+    font-size: 0.84rem;
+    color: #64748b;
+    line-height: 1.45;
+  }
+
+  .active-feature .feature-text strong {
+    color: #ffffff;
+  }
+
+  .active-feature .feature-text span {
+    display: block;
+    font-size: 0.84rem;
+    color: #cbd5e1;
+    line-height: 1.45;
+  }
+
+  .card-footer-info {
+    padding-top: 18px;
+    border-top: 1px solid rgba(1, 36, 92, 0.08);
+    font-size: 0.84rem;
+    color: #64748b;
+    font-style: italic;
+  }
+
+  .card-cta-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-full-card {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 0.92rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cta-micro-note {
+    text-align: center;
+    font-size: 0.76rem;
+    color: #94a3b8;
+  }
+
+  /* 3 Value Pillars Below */
+  .value-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 860px) {
+    .value-pillars-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+
+  .value-pillar-card {
+    background: #ffffff;
+    border: 1px solid rgba(1, 36, 92, 0.08);
+    border-radius: 6px;
+    padding: 24px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    transition: all var(--transition-fast);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+  }
+
+  .value-pillar-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(246, 196, 16, 0.4);
+    box-shadow: 0 8px 24px rgba(1, 36, 92, 0.06);
+  }
+
+  .pillar-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(1, 36, 92, 0.06);
+    color: var(--navy-main);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all var(--transition-fast);
+  }
+
+  .value-pillar-card:hover .pillar-icon {
+    background: var(--yellow-main);
+    color: var(--navy-deep);
+  }
+
+  .pillar-content h4 {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--navy-deep);
+    margin-bottom: 4px;
+  }
+
+  .pillar-content p {
+    font-size: 0.86rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,262 @@
+---
+// Header.astro - Clean Editorial Navigation Bar
+---
+
+<header class="site-header" id="header">
+  <div class="shell nav">
+    <a class="brand" href="#top" aria-label="Zangadin Barbearia">
+      <span class="brand-mark">
+        <img src="/images/logo-symbol.png" alt="Zangadin Logo" width="36" height="36" class="brand-logo-img" />
+      </span>
+      <div class="brand-copy">
+        <strong>ZANGADIN</strong>
+        <span>BARBEARIA</span>
+      </div>
+    </a>
+
+    <!-- Concise 5 Editorial Links (Without overflow/wrapping) -->
+    <nav class="nav-links" id="navLinks">
+      <a href="#experiencia" class="nav-link">Experiência</a>
+      <a href="#planos" class="nav-link">Assinatura</a>
+      <a href="#servicos" class="nav-link">Serviços</a>
+      <a href="#avaliacoes" class="nav-link">Avaliações</a>
+      <a href="#unidades" class="nav-link">Unidades</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-yellow nav-btn" href="https://cashbarber.com.br/zangadinbarbearia" target="_blank" rel="noopener">
+        <span>Agendar Horário</span>
+        <span class="btn-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <button class="hamb" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    background: transparent;
+    transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border-bottom: 1px solid transparent;
+  }
+
+  .site-header.scrolled {
+    background: rgba(0, 24, 63, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .brand-logo-img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(82%) sepia(85%) saturate(750%) hue-rotate(350deg);
+  }
+
+  .brand-copy {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand-copy strong {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    color: var(--off-white);
+    line-height: 1;
+  }
+
+  .brand-copy span {
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    color: var(--yellow-main);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  /* Concise Nav Links */
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: nowrap;
+  }
+
+  @media (max-width: 992px) {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(0, 24, 63, 0.98);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      flex-direction: column;
+      padding: 24px;
+      gap: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .site-header.nav-open .nav-links {
+      display: flex;
+    }
+  }
+
+  .nav-link {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(247, 245, 239, 0.88);
+    position: relative;
+    padding: 6px 0;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--yellow-main);
+    transition: width 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--yellow-main);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .nav-cta {
+    display: inline-flex;
+    flex-shrink: 0;
+  }
+
+  .nav-btn {
+    padding: 12px 22px;
+    font-size: 0.82rem;
+  }
+
+  @media (max-width: 992px) {
+    .nav-cta {
+      display: none;
+    }
+  }
+
+  .hamb {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 6px;
+  }
+
+  .hamb span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--off-white);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  @media (max-width: 992px) {
+    .hamb {
+      display: flex;
+    }
+  }
+
+  .site-header.nav-open .hamb span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .site-header.nav-open .hamb span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .site-header.nav-open .hamb span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+</style>
+
+<script>
+  function initHeaderMenu() {
+    const header = document.getElementById('header');
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.querySelectorAll('.nav-links .nav-link');
+
+    if (menuToggle && header) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = header.classList.toggle('nav-open');
+        menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      // Close menu when clicking a link on mobile
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          header.classList.remove('nav-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHeaderMenu);
+  } else {
+    initHeaderMenu();
+  }
+</script>

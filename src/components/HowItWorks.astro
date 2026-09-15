@@ -1,0 +1,236 @@
+---
+// HowItWorks.astro - Simplified & Clean with Sequential Border-Top Animation
+import Icon from './Icon.astro';
+---
+
+<section class="section section-light how-it-works" id="como-funciona" aria-labelledby="how-title">
+  <div class="container">
+    <div class="section-header reveal-on-scroll">
+      <span class="eyebrow">SIMPLES E DIRETO</span>
+      <h2 id="how-title" class="display-title section-title">Como funciona o Clube Zangadin</h2>
+      <p class="section-subtitle">
+        Sem burocracia. Assine, agende e mantenha seu estilo sempre alinhado.
+      </p>
+    </div>
+
+    <div class="steps-grid" id="stepsGrid">
+      <!-- Step 1 -->
+      <div class="step-card" data-step="1">
+        <div class="step-border-top">
+          <div class="step-border-fill"></div>
+        </div>
+        
+        <div class="step-header">
+          <span class="step-num">01</span>
+          <div class="step-icon">
+            <Icon name="scissors" size={22} />
+          </div>
+        </div>
+
+        <h3 class="step-title">Escolha seu plano</h3>
+        <p class="step-text">
+          Selecione a modalidade que combina com a sua rotina e assine em menos de 1 minuto.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-card" data-step="2">
+        <div class="step-border-top">
+          <div class="step-border-fill"></div>
+        </div>
+
+        <div class="step-header">
+          <span class="step-num">02</span>
+          <div class="step-icon">
+            <Icon name="clock" size={22} />
+          </div>
+        </div>
+
+        <h3 class="step-title">Agende seu horário</h3>
+        <p class="step-text">
+          Reserve em segundos pelo app ou WhatsApp com o barbeiro da sua preferência.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-card" data-step="3">
+        <div class="step-border-top">
+          <div class="step-border-fill"></div>
+        </div>
+
+        <div class="step-header">
+          <span class="step-num">03</span>
+          <div class="step-icon">
+            <Icon name="sparkles" size={22} />
+          </div>
+        </div>
+
+        <h3 class="step-title">Estilo permanente</h3>
+        <p class="step-text">
+          Compareça na Beira Rio ou Jardim Imperial e cuide do visual o mês inteiro.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .how-it-works {
+    background-color: var(--off-white);
+    border-bottom: 1px solid rgba(1, 36, 92, 0.08);
+    padding: 90px 0;
+    position: relative;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 24px;
+  }
+
+  @media (max-width: 860px) {
+    .steps-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  .step-card {
+    background: #ffffff;
+    border: 1px solid rgba(1, 36, 92, 0.08);
+    border-radius: 6px;
+    padding: 32px 26px 28px 26px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(1, 36, 92, 0.08);
+    border-color: rgba(246, 196, 16, 0.4);
+  }
+
+  /* Animated Border Top (Filling forward 1 => 2 => 3) */
+  .step-border-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: rgba(1, 36, 92, 0.06);
+  }
+
+  .step-border-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--yellow-main), #e5b408);
+    box-shadow: 0 0 10px rgba(246, 196, 16, 0.5);
+    transition: width 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .step-card.active-step .step-border-fill {
+    width: 100%;
+  }
+
+  .step-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+
+  .step-num {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--navy-deep);
+    line-height: 1;
+    transition: color 0.3s ease;
+  }
+
+  .step-card.active-step .step-num {
+    color: var(--navy-main);
+  }
+
+  .step-card:hover .step-num {
+    color: var(--yellow-main);
+  }
+
+  .step-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(1, 36, 92, 0.05);
+    color: var(--navy-main);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .step-card.active-step .step-icon {
+    background: rgba(246, 196, 16, 0.15);
+    color: var(--navy-deep);
+  }
+
+  .step-card:hover .step-icon {
+    background: var(--yellow-main);
+    color: var(--navy-deep);
+    transform: scale(1.05);
+  }
+
+  .step-title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--navy-deep);
+    margin-bottom: 8px;
+    line-height: 1.25;
+  }
+
+  .step-text {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.55;
+    margin: 0;
+  }
+</style>
+
+<script>
+  function initBorderTopProgress() {
+    const section = document.getElementById('como-funciona');
+    const cards = document.querySelectorAll('.how-it-works .step-card');
+
+    if (!section || !cards.length) return;
+
+    let hasTriggered = false;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !hasTriggered) {
+          hasTriggered = true;
+
+          // Sequentially animate border-top: 1 => 2 => 3
+          cards.forEach((card, index) => {
+            setTimeout(() => {
+              card.classList.add('active-step');
+            }, index * 320); // 320ms progression between each card
+          });
+        }
+      });
+    }, {
+      threshold: 0.25
+    });
+
+    observer.observe(section);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBorderTopProgress);
+  } else {
+    initBorderTopProgress();
+  }
+</script>

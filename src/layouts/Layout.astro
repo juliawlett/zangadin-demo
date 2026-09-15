@@ -1,0 +1,68 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "Zangadin Barbearia — Barbearia por Assinatura em Cuiabá — MT",
+  description = "Corte, barba e uma experiência completa para homens que valorizam presença, pontualidade e acabamento impecável em Cuiabá. 2 unidades."
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+
+  <!-- Open Graph & Meta -->
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#00183F">
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/png" href="/images/logo-symbol.png">
+  <link rel="shortcut icon" href="/images/logo-symbol.png" type="image/png">
+  <link rel="apple-touch-icon" href="/images/logo-symbol.png">
+
+  <!-- Google Fonts: Archivo (Headings) + Inter (Body/UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body id="top">
+  <slot />
+
+  <script>
+    // Smooth reveal animations on scroll
+    const reveals = document.querySelectorAll(".reveal, .stagger, .reveal-on-scroll");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    reveals.forEach(el => observer.observe(el));
+
+    // Header scroll background toggle
+    const header = document.querySelector(".site-header");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 30) {
+        header?.classList.add("scrolled");
+      } else {
+        header?.classList.remove("scrolled");
+      }
+    }, { passive: true });
+  </script>
+</body>
+</html>
