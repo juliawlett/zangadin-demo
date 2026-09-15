@@ -15,7 +15,7 @@ import Icon from './Icon.astro';
   <div class="shell">
     <div class="hero-grid">
       <!-- Left Column: Copy & Conversions (48%) -->
-      <div class="hero-copy reveal">
+      <div class="hero-copy">
         
         <!-- Warm Hospitality Tag -->
         <div class="hero-hospitality-tag">
@@ -82,7 +82,7 @@ import Icon from './Icon.astro';
       </div>
 
       <!-- Right Column: Full-Height Indoor Atmosphere Photo (52%) -->
-      <div class="hero-media reveal">
+      <div class="hero-media">
         <div class="hero-photo-container">
           <img
             src="/images/img_1.jpg"
@@ -123,6 +123,8 @@ import Icon from './Icon.astro';
     position: absolute;
     right: 3%;
     top: 50%;
+    bottom: auto;
+    left: auto;
     transform: translateY(-50%);
     width: clamp(340px, 42vw, 620px);
     height: clamp(340px, 42vw, 620px);
@@ -162,6 +164,12 @@ import Icon from './Icon.astro';
     grid-template-columns: 1fr 1.05fr;
     gap: 48px;
     align-items: center;
+  }
+
+  .hero-copy,
+  .hero-media {
+    opacity: 1;
+    transform: none;
   }
 
   @media (max-width: 960px) {
@@ -394,6 +402,10 @@ import Icon from './Icon.astro';
   }
 
   @media (max-width: 640px) {
+    .hero-watermark {
+      display: none;
+    }
+
     .hero-actions {
       flex-direction: column;
       align-items: stretch;
