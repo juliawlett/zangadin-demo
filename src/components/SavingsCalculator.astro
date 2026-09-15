@@ -409,8 +409,10 @@
 </style>
 
 <script>
+  type ServiceKey = 'hair' | 'beard' | 'combo';
+
   // Data for calculation
-  const PRICING_DATA = {
+  const PRICING_DATA: Record<ServiceKey, { avulsoUnitPrice: number; clubePrice: number }> = {
     hair: {
       avulsoUnitPrice: 50,
       clubePrice: 94.90
@@ -435,7 +437,7 @@
     const savingsAnnualEl = document.getElementById('savings-annual');
     const discountPctEl = document.getElementById('discount-pct');
 
-    let currentService = 'hair';
+    let currentService: ServiceKey = 'hair';
     let currentFreq = 3;
 
     function updateCalculations() {
@@ -468,7 +470,7 @@
         });
         btn.classList.add('active');
         btn.setAttribute('aria-checked', 'true');
-        currentService = btn.getAttribute('data-service') || 'hair';
+        currentService = (btn.getAttribute('data-service') as ServiceKey) || 'hair';
         updateCalculations();
       });
     });
