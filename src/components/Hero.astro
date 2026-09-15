@@ -46,6 +46,8 @@ import Icon from './Icon.astro';
             <Icon name="scissors" size={16} class="perk-icon" />
             <span>Mestres da Navalha</span>
           </div>
+        </div>
+
         <!-- Live Availability Micro-Badge -->
         <div class="hero-live-badge">
           <span class="live-pulse" aria-hidden="true"></span>
@@ -389,5 +391,53 @@ import Icon from './Icon.astro';
   .floating-text small {
     color: #cbd5e1;
     font-size: 0.78rem;
+  }
+
+  @media (max-width: 640px) {
+    .hero-actions {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 14px;
+    }
+
+    .hero-main-btn {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .text-link-yellow {
+      justify-content: center;
+    }
+
+    .hero-photo-container img {
+      max-height: 380px;
+    }
+
+    .hero-floating-badge {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      padding: 10px 12px;
+      gap: 10px;
+    }
+
+    .floating-icon {
+      width: 36px;
+      height: 36px;
+    }
+
+    .floating-text strong {
+      font-size: 0.84rem;
+    }
+
+    .floating-text small {
+      font-size: 0.72rem;
+    }
+
+    .hero-indicators {
+      gap: 8px 10px;
+      font-size: 0.8rem;
+    }
   }
 </style>
